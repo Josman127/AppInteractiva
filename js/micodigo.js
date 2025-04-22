@@ -1,9 +1,19 @@
-
-
+// botones calculadora
 const input = document.getElementById('input');
 const buttons = document.querySelectorAll('.calc-btn');
-const clear = document.getElementById('clear');
-const equals = document.getElementById('equals');
+const borrar = document.getElementById('clear');
+const igual = document.getElementById('igual');
+
+// trayendo local storage
+let array_nombre = JSON.parse(localStorage.getItem("local_array_nombre"));
+
+array_nombre.forEach(element => {
+    const empleados = document.getElementById("empleados");
+    const option = document.createElement("option");
+    option.value = element;
+    option.innerText = element;
+    empleados.appendChild(option);
+});
 
 let currentInput = '';
 
@@ -19,7 +29,7 @@ clear.addEventListener('click', () => {
     input.value = '';
 });
 
-equals.addEventListener('click', () => {
+igual.addEventListener('click', () => {
     try {
         currentInput = eval(currentInput).toString();
         input.value = currentInput;
