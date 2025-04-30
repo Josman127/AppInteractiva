@@ -38,3 +38,12 @@ igual.addEventListener('click', () => {
         currentInput = '';
     }
 });
+
+
+// imprimir tabla
+
+function imprimirH(){
+    const body  =document.getElementById("body");
+
+    
+}
