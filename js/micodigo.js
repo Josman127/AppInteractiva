@@ -53,10 +53,11 @@ igual.addEventListener('click', () => {            //resultado
 const boton = document.getElementById("borrar-historial");
 boton.addEventListener("click", ()=>{
     localStorage.removeItem("local_h");
-    array_doc = [];
+    array_input = [];
     localStorage.removeItem("local_doc");
-    array_nombre = [];
+    array_doc = [];
     localStorage.removeItem("local_nombre");
+    array_nombre = [];
     alert("historial borrado");
     imprimirH()
 })
