@@ -1,29 +1,48 @@
 const subir = document.getElementById("Subir");
 const borrar = document.getElementById("borrar");
 
+const nombre = document.getElementById("nombre");
+const documento = document.getElementById("documento");
+const correo = document.getElementById("correo");
+const numero = document.getElementById("numero");
 
 
-let algo_array = localStorage.getItem("local_array_nombre");
-let array_nombre = algo_array ? JSON.parse(algo_array) : [];
+let algo_array = localStorage.getItem("local_array_personal");
+let array_personal = algo_array ? JSON.parse(algo_array) : [];
 
 
 
 subir.addEventListener("click", ()=>{
-    const input = document.getElementById("nombre").value;
+    let nombreV = nombre.value;
+    let documentoV = documento.value;
+    let correoV = correo.value;
+    let numeroV = numero.value;
 
-    if(input != ""){
-        array_nombre.push(input);
+    if(nombreV != "" && documentoV != "" && correoV != "" && numeroV != ""){
+
+        let json = {
+            nombre: nombreV,
+            documento: documentoV,          // agregando personal al array.
+            correo: correoV,
+            numero: numeroV
+        }
+        array_personal.push(json);
+
     }else{
-        alert("Ingrese un nombre de empleado válido.");
+        alert("Ingrese correctamente los datos del empleado.");
     }
 
-    localStorage.setItem("local_array_nombre", JSON.stringify(array_nombre));
-    console.log(array_nombre);
+    nombre.value = "";
+    documento.value = "";
+    correo.value = "";
+    numero.value = "";
+    localStorage.setItem("local_array_personal", JSON.stringify(array_personal));
+    console.log(array_personal);
 })
 
 
 borrar.addEventListener("click", ()=>{
     localStorage.clear();
-    array_nombre = [];
-    console.log(array_nombre);
+    array_personal = [];
+    console.log(array_personal);
 })
