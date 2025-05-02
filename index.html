@@ -17,35 +17,28 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="css/bootstrap.css">
     </head>
-    <body id="page-top">
+    <body id="cuerpo">
         <!-- Page Content-->
-
-        <section id="login" class="container my-2" >
+        <section class="container my-2" >
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 bg-secondary rounded-3 text-center shadow">
-                    <h2 class="my-3 text-white">Ingreso de personal.</h2>
-                    <hr>
+                <div class="col-lg-6 bg-gradient bg-black bg-secondary rounded-3 text-center shadow">
+                    <h2 class="my-3 text-white">Ingreso de personal.</h2><hr>
                     <div class="mb-3">
                         <label for="nombre" class="form-label text-white">Nombre del empleado</label> <!-- nombre -->
                         <input type="text" class="fs-5 form-control" id="nombre" placeholder="Nombre">
-
                         <label for="nombre" class="form-label text-white">Documento del empleado</label> <!-- documento -->
                         <input type="number" class="fs-5 form-control" id="documento" placeholder="Documento">
-
                         <label for="nombre" class="form-label text-white">Correo del empleado</label> <!-- correo -->
                         <input type="email" class="fs-5 form-control" id="correo" placeholder="Correo">
-
                         <label for="nombre" class="form-label text-white">Número telefónico del empleado</label> <!-- número -->
                         <input type="number" class="fs-5 form-control" id="numero" placeholder="N° telefónico">
                         <button id="Subir" class="btn btn-primary my-2 w-25">Subir</button>
                     </div>
-                    <button id="borrar" class="btn btn-danger my-2 w-25 w-100-sm">Borrar Empleados</button> <!-- botón borrar empleados -->
-                    <hr>
-                    <a href="calculadora.html"><button class="btn btn-outline-warning mb-3 text-white">Ir a Calculadora</button></a> <!-- botón a la calculadora -->
+                    <button id="borrar" class="btn btn-danger my-2 w-25 w-100-sm">Borrar Empleados</button><hr> <!-- botón borrar empleados -->
+                    <a id="hrf" href=""><button id="go" class="btn btn-outline-warning mb-3 text-white">Ir a Calculadora</button></a> <!-- botón a la calculadora -->
                 </div>
             </div>
         </section>
-
         <!-- Js -->
         <script src="js/codigoIndex.js"></script>
     </body>
